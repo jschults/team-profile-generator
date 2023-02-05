@@ -1,0 +1,9 @@
+header {
+    font-size: 300%;
+    padding: 80px;
+    text-align: center;
+    background: red;
+    color: #fff;
+}
+
+/* above: basic css to make the header. this is a copy of the one used by this app to generate the emplyee cards */
