@@ -206,13 +206,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Everyone1138/GetYourTeamOrganized.git"
+    "url": "git+https://github.com/jschults/team-profile-generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Everyone1138/GetYourTeamOrganized/issues"
+    "url": "https://github.com/jschults/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/Everyone1138/GetYourTeamOrganized#readme"
+  "homepage": "https://github.com/jschults/team-profile-generator#readme"
 }

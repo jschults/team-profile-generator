@@ -11,14 +11,14 @@ let teamArray = []; // array to help push new objects made with the constructors
 function organizeTeam () {    // This function encapsulates the rest of the functions(inquirer prompt, file generator, .then, etc ) so all components of the app work together at the same time.   
 
 function init() {
-    console.log("Welcome to team generator!We'll start by adding the project manager!") // this funtion starts off the app by asking the user their managers info
+    console.log("Welcome to t the team profile generator!We'll start by adding the project manager!") // this function starts off the app by asking the user their managers info
     addManager();
 }
 function nextStep(){   // This function asks the user if they want to make a Engineer employee card, Intern  employee card, or to finish and build the team. 
     inquirer.prompt([{
             type: "list",
             name: "next",
-            message: "What would you like to do next?",
+            message: "What do you want to do next?",
             choices: ["Intern", "Engineer", "build team"]
     }]).then(function(empInfoadd) {   // this .then function tells the app "where to go" based on the users choice of creating another employee card or being done and building the team
         switch (empInfoadd.next) {   
@@ -47,19 +47,19 @@ function addManager() { // function that asks the user questions.User input is t
         {
             type: "input",
             name: "managerId",
-            message: "What's the managers employee identification number?"
+            message: "What's the managers work id number?"
         },
 
         {
             type: "input",
             name: "managerEmail",
-            message: "What is the manager's email address?"
+            message: "What is the manager's personal email address?"
         },
 
         {
             type: "input",
             name: "officeNumb",
-            message: "What is the manager's office phone number?"
+            message: "What is the manager's work phone number?"
         }
     ]).then(answers => { // this helps create new objects with the information input from the user. the contructors are used for this. 
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumb);
@@ -79,13 +79,13 @@ function addEngineer() {  // function that takes user input to help populate Eng
         {
             type: "input",
             name: "engineId",
-            message: "What's the engineers employee identification number?"
+            message: "What's the engineers work id number?"
         },
 
         { 
             type: "input",
             name: "engineEmail",
-            message: "What's the engineers email address?"
+            message: "What's the engineers personal email address?"
         },
 
         {
@@ -113,13 +113,13 @@ function addEngineer() {  // function that takes user input to help populate Eng
         {
             type: "input",
             name: "intId",
-            message: "What's the interns employee identification number?"
+            message: "What's the interns work id number?"
         },
 
         {
             type: "input",
             name: "intEmail",
-            message: "What's the interns email address?"
+            message: "What's the interns personal email address?"
         },
 
         {
@@ -137,7 +137,7 @@ function addEngineer() {  // function that takes user input to help populate Eng
 
     function buildHTMLteam() {  // this function gathers all the users input and writes/generates an html file with employee cards populated with the user input
         fs.writeFileSync('./dist/index.html', genHTML(teamArray)) 
-        console.log('You have successfully organized your team!')
+        console.log('You have successfully put together your team!')
     }
 
    
